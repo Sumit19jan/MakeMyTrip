@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginOrSignup.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login/Signup"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvSign_LoginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rect_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Sign in with Google"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use Mobile Number to Login/Signup"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/etMobileNumber_LoginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rect_bg"
+        android:gravity="center"
+        android:hint="Enter Your Mobile Number"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnContinue_LoginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rect_bg"
+        android:text="CONTINUE"
+        android:textSize="18dp" />
+
+
+</LinearLayout>
