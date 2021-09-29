@@ -1,13 +1,953 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.HomeFragment">
+    android:background="@drawable/moutain"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="home" />
-</FrameLayout>
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:id="@+id/iv_More_HomeFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_more_" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iv_More_HomeFragment"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/my_logo" />
+
+            <ImageView
+                android:id="@+id/search_HomeFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="100dp"
+                android:src="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/wallet_HomeFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/ic_wallet" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_Flight_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_flight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_Flight_HomeFragment"
+                    android:layout_marginStart="20dp"
+                    android:text="Flight"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/iv_Hotel_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/iv_Flight_HomeFragment"
+                    android:src="@drawable/ic_hotel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_Flight_HomeFragment"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/iv_Flight_HomeFragment"
+                    android:text="Hotels"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_Train_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_toEndOf="@id/iv_Hotel_HomeFragment"
+                    android:src="@drawable/ic_train" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_Flight_HomeFragment"
+                    android:layout_marginStart="60dp"
+                    android:layout_toEndOf="@id/iv_Hotel_HomeFragment"
+                    android:text="Trains \n Bus"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_Holiday_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_toEndOf="@id/iv_Train_HomeFragment"
+                    android:src="@drawable/ic_holiday" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_Flight_HomeFragment"
+                    android:layout_marginStart="70dp"
+                    android:layout_toEndOf="@id/iv_Train_HomeFragment"
+                    android:text="Holidays \n Packages"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_AirportCabs_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_car" />
+
+                <TextView
+                    android:id="@+id/tvAirportCarcab_Homefragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_AirportCabs_HomeFragment"
+                    android:layout_marginStart="20dp"
+                    android:text="Airport \n Cabs"
+                    android:textColor="@color/black" />
+
+
+                <ImageView
+                    android:id="@+id/iv_HomeStays_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/iv_AirportCabs_HomeFragment"
+                    android:src="@drawable/ic_hotel" />
+
+                <TextView
+                    android:id="@+id/tvHomeStay_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_AirportCabs_HomeFragment"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/iv_AirportCabs_HomeFragment"
+                    android:text="HomeStays"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_OutstationCabs_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_toEndOf="@id/iv_HomeStays_HomeFragment"
+                    android:src="@drawable/ic_car" />
+
+                <TextView
+                    android:id="@+id/tvOutstationCab_Homefragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_AirportCabs_HomeFragment"
+                    android:layout_marginStart="60dp"
+                    android:layout_toEndOf="@id/iv_HomeStays_HomeFragment"
+                    android:text="outstation \n cabs"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_Activity_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_toEndOf="@id/iv_OutstationCabs_HomeFragment"
+                    android:src="@drawable/ic_holiday" />
+
+                <TextView
+                    android:id="@+id/tvActivity_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_AirportCabs_HomeFragment"
+                    android:layout_marginStart="70dp"
+                    android:layout_toEndOf="@id/iv_OutstationCabs_HomeFragment"
+                    android:text="tour"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_SelfDrive_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAirportCarcab_Homefragment"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_selfdrive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_SelfDrive_HomeFragment"
+                    android:layout_marginStart="20dp"
+                    android:text="Airport \n Cabs"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_NearBy_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_HomeStays_HomeFragment"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_toEndOf="@id/iv_SelfDrive_HomeFragment"
+                    android:src="@drawable/ic_navigation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_NearBy_HomeFragment"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/iv_AirportCabs_HomeFragment"
+                    android:text="HomeStays"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_pnr_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvOutstationCab_Homefragment"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/iv_NearBy_HomeFragment"
+                    android:src="@drawable/ic_pnr" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_pnr_HomeFragment"
+                    android:layout_marginStart="60dp"
+                    android:layout_toEndOf="@id/iv_NearBy_HomeFragment"
+                    android:text="Trains PNR \n Status"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_Visa_HomeFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvActivity_HomeFragment"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/iv_OutstationCabs_HomeFragment"
+                    android:src="@drawable/ic_visa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_Visa_HomeFragment"
+                    android:layout_marginStart="70dp"
+                    android:layout_toEndOf="@id/iv_pnr_HomeFragment"
+                    android:text="Visa \n Servises"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                android:padding="5dp"
+                app:cardCornerRadius="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_FlightStatus_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_flight" />
+
+                    <TextView
+                        android:id="@+id/tv_FlightStatus_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Flight Status"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_GiftCards_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_giftcard" />
+
+                    <TextView
+                        android:id="@+id/tv_GiftCard_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Gift Card"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_Offer_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_offer" />
+
+                    <TextView
+                        android:id="@+id/tv_Offer_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Offers"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_metro_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_train" />
+
+                    <TextView
+                        android:id="@+id/tv_Metro_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="metro"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_UPI_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_upi" />
+
+                    <TextView
+                        android:id="@+id/tv_UPI_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="UPI Pay"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_mmt_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_mmt" />
+
+                    <TextView
+                        android:id="@+id/tv_mmt_HomeFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="MMTBl"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Did you get Vaccinated ?"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="30dp"
+                    android:src="@drawable/ic_visa" />
+
+                <TextView
+                    android:id="@+id/tvYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDid"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="you can download Your CoWIN Vaccination\nCertificate !"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivsheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvYou"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_page" />
+
+                <TextView
+                    android:id="@+id/tvbook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvYou"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/ivsheet"
+                    android:text="Book your\nvaccination slot"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/uvdoenlaod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvYou"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tvbook"
+                    android:src="@drawable/ic_download" />
+
+                <TextView
+                    android:id="@+id/tvdownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvYou"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/uvdoenlaod"
+                    android:text="Download your\ncertificate"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/ivsheet"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/line"
+                    android:layout_marginStart="10dp"
+                    android:drawableEnd="@drawable/ic_right"
+                    android:padding="5dp"
+                    android:text="Already downloaded? View Your certificate here"
+                    android:textColor="#4D95FF"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="5dp"
+                android:text="CONTINUE YOUR SEARCH"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="New Delhi -> Chennai"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="5 Dec 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="New Delhi -> Patna"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="5 Jan 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="MUMBAI -> KOLKATA"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="10 Oct 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="New Delhi -> Chennai"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="5 Dec 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="VARANASI -> NEW DELHI"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="5 Dec 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="HYDRABAD -> Chennai"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="11 Jan 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rect_blue"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="FLIGHT"
+                                android:textColor="#4D95FF"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="New Delhi -> RANCHI"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="5 Aug 21" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvHotels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:drawableStart="@drawable/ic_hotel"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="HOTELS"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ViewAll_HomeFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:drawableEnd="@drawable/ic_baarrow_forward"
+                android:gravity="center"
+                android:text="View All"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBased"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHotels"
+                android:layout_marginStart="20dp"
+                android:text="Based on your search hotels in Noida"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_hotel_homeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBased"
+                android:layout_marginStart="20dp"
+                android:padding="10dp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/offer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="EXCLUSIVE PARTNERS"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ex1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ex2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ex3" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

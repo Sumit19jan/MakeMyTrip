@@ -1,14 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragment.OffersFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_arrow_back"
+        android:drawablePadding="10dp"
+        android:text="Offers"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            android:padding="10dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnWelcome_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Welcome Offers"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnTrending_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Trending"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnFlight_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Flight"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnHotels_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Hotels"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnVillas_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Villas"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnTrains_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Trains"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnHolidays_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Holidays"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnCabs_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Cabs"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnBus_OffersFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Bus"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnSelfDrive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="SelfDrive"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_OffersFragment"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
