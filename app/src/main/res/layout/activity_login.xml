@@ -4,20 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".LoginOrSignup.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            app:tabBackground="@drawable/tab_pager_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Login/Signup"
         android:textSize="22sp" />
+
 
     <TextView
         android:id="@+id/tvSign_LoginActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="20dp"
         android:background="@drawable/rect_bg"
         android:gravity="center"
@@ -30,6 +55,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Use Mobile Number to Login/Signup"
         android:textSize="18dp" />
 
@@ -43,14 +69,26 @@
         android:hint="Enter Your Mobile Number"
         android:padding="10dp" />
 
-    <Button
-        android:id="@+id/btnContinue_LoginActivity"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/rect_bg"
-        android:text="CONTINUE"
-        android:textSize="18dp" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnContinue_LoginActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/rect_bg"
+            android:text="CONTINUE"
+            android:textSize="18dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_LoginActivity"
+            android:layout_width="35dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_height="35dp" />
+    </FrameLayout>
 
 
 </LinearLayout>
